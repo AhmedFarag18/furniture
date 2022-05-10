@@ -1,4 +1,4 @@
-# furniture
+# Furniture
 
 
 This is a furniture landing page preview some products
