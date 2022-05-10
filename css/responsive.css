@@ -11,6 +11,22 @@ Start Media Query
     }
 }
 
+@media (min-width:991px) {
+    .col-lg-3:nth-of-type(1) {
+        width: calc(100% / 4 + 30px);
+        flex: 1 1 calc(100% / 4 + 30px);
+    }
+    .col-lg-3:nth-of-type(2),
+    .col-lg-3:nth-of-type(3) {
+        width: calc(100% / 4 - 70px);
+        flex: 1 1 calc(100% / 4 - 70px);
+    }
+    .col-lg-3:nth-of-type(4) {
+        width: calc(100% / 4);
+        flex: 1 1 calc(100% / 4);
+    }
+}
+
 
 /* media query in tablet */
 
@@ -81,6 +97,23 @@ Start Media Query
         flex: calc(100% / 2 - 20px);
         margin: 20px 0 0 20px;
     }
+    .blogs_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .blogs_content,
+    .blogs_video {
+        width: 100%;
+    }
+    .blogs_video {
+        max-height: initial;
+    }
+    .col-md-6 {
+        width: calc(100% / 2 - 20px);
+        flex: 1 1 calc(100% / 2 - 20px);
+    }
 }
 
 
@@ -88,7 +121,7 @@ Start Media Query
 
 @media (max-width:767px) {
     .container {
-        width: 90%;
+        width: 80%;
     }
     .dropdown-menu {
         width: 180px;
@@ -169,13 +202,29 @@ Start Media Query
         flex: calc(100% / 1 - 20px);
         margin: 20px 0 0 20px;
     }
+    .shopping-cart {
+        padding: 20px;
+        width: 60%;
+    }
+    .blog_item-top {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .blog_title {
+        margin: 0;
+    }
+    .col-sm-12 {
+        width: calc(100% / 1 - 20px);
+        flex: 1 1 calc(100% / 1 - 20px);
+    }
 }
 
 @media (max-width:400px) {
     .sprites {
         grid-template-columns: repeat(1, 1fr);
     }
-    .header-content .login {
+    .header-content .login li:not(:last-child) {
         display: none;
     }
     .dropdown-menu {
@@ -201,6 +250,20 @@ Start Media Query
         height: 30px;
         line-height: 30px;
     }
+    .discount-item-title {
+        font-size: 20px;
+    }
+    .shopping-cart {
+        padding: 20px;
+        width: 80%;
+        right: 5%;
+    }
+    .blogs_content {
+        padding: 10px 10px;
+    }
+    .blog-desc {
+        padding: 0;
+    }
 }
 
 @media (max-width:300px) {
@@ -212,5 +275,24 @@ Start Media Query
     .dropdown-menu.drop2 {
         width: 140px;
         padding: 0;
+    }
+    .header-content .login li span {
+        display: none;
+    }
+    .shopping-cart {
+        padding: 10px;
+        width: 90%;
+        right: 5%;
+    }
+    .products-overlay ul li {
+        width: 30px;
+        height: 30px;
+    }
+    .products-overlay ul li i {
+        line-height: 30px;
+    }
+    .footerlogo {
+        width: 100%;
+        max-width: 230px;
     }
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is furniture website preview products">
-    <title>HTML5&CSS3-Rocker</title>
+    <title>Rocker-Furniture Template</title>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="alert-added"></div>
 
     <!-- start header -->
     <header>
@@ -59,10 +60,9 @@
                         </li>
                         <li><a href="#" class="link-item">armoires</a></li>
                         <li><a href="#" class="link-item">study table</a></li>
-
-
                         <li class="dropdown">
                             <a href="#" class="link-item">plastic chair</a>
+                            <!-- start deopdown -->
                             <div class="dropdown-menu drop2">
                                 <ul class="list-unstyled">
                                     <li><a href="#">bookshelves</a></li>
@@ -72,7 +72,7 @@
                             </div>
                         </li>
                         <li><a href="#" class="link-item">wardrobes</a></li>
-
+                        <!-- start deopdown -->
                         <li class="dropdown">
                             <a href="#" class="link-item">more</a>
                             <div class="dropdown-menu drop2">
@@ -90,11 +90,25 @@
                     <ul class="list-unstyled">
                         <li><i class="fa fa-search fa-lg"></i></li>
                         <li><i class="fa fa-user fa-lg"></i></li>
-                        <li><i class="fa fa-shopping-bag fa-lg"></i>Your Bag</li>
+                        <li class="shopping-cart-count"><i data-count="0" class="fa fa-shopping-bag fa-lg"></i><span>Your Bag</span></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <!-- start shopping cart -->
+        <div class="shopping-cart">
+            <div class="shopping_cart-price">
+                <div class="no_products">
+                    Your Shopping Cart Is Empty!
+                </div>
+                <!-- items will added here -->
+                <div class="total">
+                    <span>Total</span><span class="total-price">0$</span>
+                </div>
+            </div>
+        </div>
+        <!-- end shopping cart count -->
     </header>
     <!-- end header -->
 
@@ -108,18 +122,17 @@
                     <div class="inner">
                         <div class="slide slide_1">
                             <div class="slide-content">
-                                <img src="images/main-banner-1-1600x700.jpg" alt="">
+                                <img src="images/main-banner-1-1600x700.jpg" alt="img">
                             </div>
                         </div>
                         <div class="slide slide_2">
                             <div class="slide-content">
-                                <img src="images/main-banner-2-1600x700.jpg" alt="">
+                                <img src="images/main-banner-2-1600x700.jpg" alt="img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div id="controls">
                 <label for="slide1"><i class="fa fa-exchange-alt fa-lg"></i></label>
                 <label for="slide2"><i class="fa fa-exchange-alt fa-lg"></i></label>
@@ -128,12 +141,9 @@
                 <label for="slide1"></label>
                 <label for="slide2"></label>
             </div>
-
-
         </div>
     </div>
     <!-- end slider -->
-
 
     <!-- start  category-->
     <section class="category section-padding ">
@@ -144,6 +154,7 @@
         </div>
 
         <div class="container">
+            <!-- Start inner Category -->
             <div class="category-items">
                 <div class="category-item">
                     <img src="images/category/category-banner1.jpg" alt="alt">
@@ -174,6 +185,7 @@
                 <span class="bolt active"></span>
                 <span class="bolt"></span>
             </div>
+            <!-- End inner Category -->
 
             <!-- start Discount -->
             <div class="discount section-padding">
@@ -212,7 +224,6 @@
                 </div>
             </div>
             <!-- end  discount -->
-
 
             <!-- start  sprites -->
             <div class="sprites">
@@ -253,12 +264,9 @@
                 </div>
             </div>
             <!-- end  sprites -->
-
-
         </div>
     </section>
     <!-- end  category-->
-
 
     <!-- start products -->
     <section class="products section-padding">
@@ -278,14 +286,14 @@
             <div class="products-items">
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair1.jpg" alt="chair1">
+                        <img src="images/category/chair1.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair2.jpg" alt="chair2">
+                            <img src="images/category/chair2.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                             <div class="sale">Sale</div>
                         </div>
@@ -299,22 +307,23 @@
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                         </div>
-                        <h4>Necessitatibus</h4>
+                        <h4 class="product-title">Necessitatibus</h4>
                         <p class="price">
                             <span class="price-new">$119.60</span>
+                            <span class="price-old">$83.60</span>
                         </p>
                     </div>
                 </div>
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair3.jpg" alt="chair1">
+                        <img src="images/category/chair3.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair4.jpg" alt="chair2">
+                            <img src="images/category/chair8.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -326,22 +335,23 @@
                             <span class="fa-stack"><i class="fas fa-star star-yellow"></i></span>
                             <span class="fa-stack"><i class="fas fa-star star-yellow"></i></span>
                         </div>
-                        <h4>Nostrud Exercitation</h4>
+                        <h4 class="product-title">Nostrud Exercitation</h4>
                         <p class="price">
-                            <span class="price-new">$78.80</span> <span class="price-old">$83.60</span>
+                            <span class="price-new">$78.80</span>
+                            <span class="price-old">$83.60</span>
                         </p>
                     </div>
                 </div>
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair5.jpg" alt="chair1">
+                        <img src="images/category/chair12.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair6.jpg" alt="chair2">
+                            <img src="images/category/chair6.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -353,22 +363,23 @@
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                         </div>
-                        <h4>Praesentium Voluptatum</h4>
+                        <h4 class="product-title">Praesentium Voluptatum</h4>
                         <p class="price">
-                            $128.00
+                            <span class="price-new">$128.00</span>
+                            <span class="price-old">$83.60</span>
                         </p>
                     </div>
                 </div>
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair7.jpg" alt="chair1">
+                        <img src="images/category/chair7.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair8.jpg" alt="chair2">
+                            <img src="images/category/chair4.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                             <div class="sale">Sale</div>
                         </div>
@@ -382,22 +393,23 @@
                             <span class="fa-stack"><i class="fas fa-star star-yellow"></i></span>
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                         </div>
-                        <h4>Neque Porro Quisquam</h4>
+                        <h4 class="product-title">Neque Porro Quisquam</h4>
                         <p class="price">
-                            <span class="price-new">$115.00</span> <span class="price-old">$118.00</span>
+                            <span class="price-new">$115.00</span>
+                            <span class="price-old">$118.00</span>
                         </p>
                     </div>
                 </div>
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair9.jpg" alt="chair1">
+                        <img src="images/category/chair9.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair10.jpg" alt="chair2">
+                            <img src="images/category/chair8.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                             <div class="sale">Sale</div>
                         </div>
@@ -411,22 +423,23 @@
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                         </div>
-                        <h4>Occasion Praesentium</h4>
+                        <h4 class="product-title">Occasion Praesentium</h4>
                         <p class="price">
-                            $105.20
+                            <span class="price-new">$105.20</span>
+                            <span class="price-old">$83.60</span>
                         </p>
                     </div>
                 </div>
                 <div class="products-item">
                     <div class="products-img">
-                        <img src="images/category/chair11.jpg" alt="chair1">
+                        <img src="images/category/chair11.jpg" alt="item">
                         <div class="products-overlay">
-                            <img src="images/category/chair12.jpg" alt="chair2">
+                            <img src="images/category/chair10.jpg" alt="item">
                             <ul class="overlay-icon list-unstyled">
                                 <li data-tooltip="Add to Wish List"><i class="far fa-heart"></i></li>
                                 <li data-tooltip="Quick view"><i class="fas fa-eye"></i></li>
                                 <li data-tooltip="Add to Compare"><i class="fas fa-exchange-alt"></i></li>
-                                <li data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
+                                <li class="addToCart" data-tooltip="Add to Cart"><i class="fa fa-shopping-cart"></i></li>
                             </ul>
                             <div class="sale">Sale</div>
                         </div>
@@ -440,9 +453,10 @@
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                             <span class="fa-stack"><i class="fas fa-star"></i></span>
                         </div>
-                        <h4>Neque Porro Quisquam</h4>
+                        <h4 class="product-title">Neque Porro Quisquam</h4>
                         <p class="price">
-                            <span class="price-new">$115.00</span> <span class="price-old">$118.00</span>
+                            <span class="price-new">$115.00</span>
+                            <span class="price-old">$118.00</span>
                         </p>
                     </div>
                 </div>
@@ -451,6 +465,151 @@
     </section>
     <!-- end products -->
 
+    <!-- start blogs -->
+    <section class="blogs">
+        <div class="container">
+            <div class="blogs_inner">
+                <div class="blogs_video">
+                    <video poster="images/banner.PNG"></video>
+                    <span class="static-wrapper">
+                        <a href="#"><img src="images/play.png" alt="play"></a>
+                    </span>
+                </div>
+                <div class="blogs_content">
+                    <div class="blog_item-top">
+                        <div class="date-comment">
+                            <div class="date-time"> <span>28 </span>February, 2018 </div>
+                        </div>
+                        <h4 class="blog_title">
+                            <p>Necessitatibus Saepe</p>
+                        </h4>
+                    </div>
+                    <div class="blog-desc"> The standard Lorem Ipsum passage, used since the 1500s"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur ...
+                    </div>
+                    <div class="bolletes">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start top brands section -->
+    <section class="brands-box">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Top Brands</h2>
+                <span class="line"></span>
+            </div>
+            <div class="carousel-block">
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client1.png" alt="NFL">
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client2.png" alt="Sony">
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client3.png" alt="Coca Cola">
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client4.png" alt="Burger King">
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client5.png" alt="Canon">
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="product-block-inner">
+                        <img src="images/client6.png" alt="Harley Davidson">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="row mb-3 border-bottom">
+                <div class="col-lg-3 col-md-6 col-sm-12 item_1">
+                    <div class="footerlogo">
+                        <img src="images/footer-logo.png" alt="footer logo">
+                    </div>
+
+                    <div class="footer-desc">
+                        <p class="mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. LoremIpsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy.</p>
+                    </div>
+                    <div class="footercms-inner">
+                        <img src="images/cms-footer-1.png" alt="cms1">
+                        <img src="images/cms-footer-2.png" alt="cms2">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3 class="line-top">Information</h3>
+                    <ul class="footer-links mb-3">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3 class="line-top">My Account</h3>
+                    <ul class="footer-links mb-3">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order history</a></li>
+                        <li><a href="#">wish list</a></li>
+                        <li><a href="#">newsletter</a></li>
+                        <li><a href="#">returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3 class="line-top">Subscribe Now</h3>
+                    <div class="newsletter">
+                        <input type="email" name="txtemail" id="txtemail" value="" placeholder="Enter Your Email Address" class="form-control input-lg">
+                        <div class="subscribe-btn">
+                            <button type="submit" class="btn btn-default btn-lg"></button>
+                        </div>
+                    </div>
+                    <ul class="social list-unstyled mb-5">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row t-center copyright">
+                <div class="col-md-8">
+                    <p class="small">Copyright © 2022 All rights reserved <i class="fas fa-heart"></i> This template is made by <a href="#" target="_blank"> Ahmed Farag </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- End Footer -->
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
